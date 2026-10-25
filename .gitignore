@@ -36,6 +36,8 @@ data/uploads/*
 data/db/*.db
 data/embeddings/*.npy
 !data/embeddings/.gitkeep
+backend/data/uploads/*
+!backend/data/uploads/.gitkeep
 
 # Models weights cache
 *.pt
