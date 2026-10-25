@@ -102,6 +102,37 @@ http://127.0.0.1:5173
 
 ---
 
+## 5. Streamlit Cloud & Web Deployment
+
+A complete Streamlit interface is provided in `streamlit_app.py` for cloud and lightweight zero-setup deployment.
+
+### Running Streamlit Locally
+```bash
+# Install root dependencies
+pip install -r requirements.txt
+
+# Launch the Streamlit application
+streamlit run streamlit_app.py
+```
+Open your browser at `http://localhost:8501`.
+
+### Deploying to Streamlit Community Cloud (via GitHub)
+1. Ensure your latest changes are pushed to GitHub:
+   ```bash
+   git push origin main
+   ```
+2. Navigate to [Streamlit Community Cloud](https://share.streamlit.io/) and log in with your GitHub account.
+3. Click **"New app"** or **"Create app"**.
+4. Configure the deployment settings:
+   - **Repository:** `premveerlavania/Multimodal-Attendance-Engagement-Agent`
+   - **Branch:** `main`
+   - **Main file path:** `streamlit_app.py`
+5. Click **"Deploy!"**.
+Streamlit Cloud will automatically detect `requirements.txt` and `packages.txt`, build the container, and launch your live application at `https://<your-app-name>.streamlit.app`!
+```
+
+---
+
 ## 5. Automated Test Suite
 
 Run unit and integration tests covering database initialization, student CRUD, consent verification, attendance threshold logic, API endpoints, head-pose calculation, and audio analysis:
